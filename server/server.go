@@ -26,7 +26,7 @@ func (s *Server) GraphQL() http.HandlerFunc {
 
 		var rBody reqBody
 
-		err := json.NewDecoder(request.Body).Decode(&request.Body)
+		err := json.NewDecoder(request.Body).Decode(&rBody)
 		if err != nil {
 			http.Error(writer, "Error parsing JSON request body", 400)
 		}
