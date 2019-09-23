@@ -3,6 +3,9 @@ package postgres
 import (
 	"database/sql"
 	"fmt"
+
+	// postgres driver
+	_ "github.com/lib/pq"
 )
 
 type Db struct {
